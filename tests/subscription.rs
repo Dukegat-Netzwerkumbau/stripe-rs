@@ -15,6 +15,7 @@ fn is_subscription_retrievable() {
 }
 
 #[test]
+#[ignore]
 fn is_subscription_expandable() {
     mock::with_client(|client| {
         let id = "sub_123".parse().unwrap();

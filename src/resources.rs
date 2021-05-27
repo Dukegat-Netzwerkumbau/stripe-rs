@@ -80,10 +80,12 @@ pub use self::event::*;
 #[cfg(feature = "checkout")]
 mod checkout_session;
 #[cfg(feature = "checkout")]
+mod checkout_session_ext;
 mod item;
 #[cfg(feature = "checkout")]
 pub use self::checkout_session::*;
 #[cfg(feature = "checkout")]
+pub use self::checkout_session_ext::*;
 pub use self::item::*;
 
 // Billing

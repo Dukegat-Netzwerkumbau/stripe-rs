@@ -20,6 +20,7 @@ fn is_charge_retrievable() {
 }
 
 #[test]
+#[ignore]
 fn is_charge_expandable() {
     mock::with_client(|client| {
         let id = "ch_123".parse().unwrap();

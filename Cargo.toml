@@ -28,7 +28,7 @@ travis-ci = {repository = "wyyerd/stripe-rs"}
 name = "stripe"
 
 [features]
-default = ["full", "webhook-events", "default-tls"]
+default = ["full", "webhook-events", "default-tls", "blocking"]
 full = [
 #    "core",
 #    "payment-methods",
@@ -60,6 +60,7 @@ events = []
 
 # Enable the blocking client
 blocking = ["tokio/rt"]
+async = []
 
 default-tls = ["hyper-tls"]
 rustls-tls = ["hyper-rustls"]
@@ -82,9 +83,9 @@ tokio = "1"
 hmac = { version = "0.7", optional = true }
 sha2 = { version = "0.8", optional = true }
 
-#[[example]]
-#name = "async_create_charge"
-#required-features = ["async"]
+[[example]]
+name = "async_create_charge"
+required-features = ["async"]
 
 [[example]]
 name = "create_charge"
