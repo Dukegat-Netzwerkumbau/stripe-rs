@@ -5,6 +5,8 @@ use crate::resources::{
     Currency,
 };
 use serde_derive::{Deserialize, Serialize};
+use crate::CheckoutSessionId;
+use crate::params::Expand;
 
 /// The parameters for `CheckoutSession::create`
 ///
@@ -108,5 +110,11 @@ impl CheckoutSession {
     /// For more details see [https://stripe.com/docs/api/payment_methods/attach](https://stripe.com/docs/api/payment_methods/attach).
     pub fn create(client: &Client, params: CreateCheckoutSession) -> Response<CheckoutSession> {
         client.post_form("/checkout/sessions", params)
+    }
+}
+
+impl CheckoutSession {
+    pub fn retrieve(client: &Client, id: &CheckoutSessionId, expand: &[&str]) -> Response<CheckoutSession> {
+        client.get_query(&format!("/checkout/sessions/{}", id), &Expand { expand })
     }
 }
