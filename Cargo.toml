@@ -10,7 +10,8 @@ version = "0.13.0-dev"
 description = "API bindings for the Stripe HTTP API"
 authors = [
   "Anna Baldwin <abaldwin@developers.wyyerd.com>",
-  "Kevin Stenerson <kestred@users.noreply.github.com>"
+  "Kevin Stenerson <kestred@users.noreply.github.com>",
+  "Simon Struck <simon@simonscode.org>"
 ]
 license = "MIT OR Apache-2.0"
 readme = "README.md"
@@ -20,9 +21,6 @@ documentation = "https://docs.rs/stripe-rust"
 keywords = ["stripe", "v1", "api"]
 categories = ["api-bindings"]
 edition = "2018"
-
-[badges]
-travis-ci = {repository = "wyyerd/stripe-rs"}
 
 [lib]
 name = "stripe"
